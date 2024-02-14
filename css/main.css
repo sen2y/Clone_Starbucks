@@ -381,8 +381,17 @@ a {
 
 .notice .notice-line .inner .inner__left .swiper-container {
   height: 62px;
-  background-color: orange;
   flex-grow: 1; /*flex-grow: 1; -> 남은 공간을 다 차지하게 함*/
+}
+
+.notice .notice-line .inner .inner__left .swiper-slide {
+  height: 62px;
+  display: flex;
+  align-items: center;
+}
+
+.notice .notice-line .inner .inner__left .swiper-slide a {
+  color: #fff;
 }
 
 .notice .notice-line .inner .inner__left .notice-line__more {

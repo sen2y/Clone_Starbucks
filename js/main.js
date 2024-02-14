@@ -55,4 +55,6 @@ fadeEls.forEach(function (fadeEl, index) {
 // new Swiper(선택자, 옵션)
 new Swiper(".notice-line .swiper-container", {
   direction: "vertical",
+  autoplay: true, // 자동재생
+  loop: true, // 반복재생
 }); // new : 생성자 함수를 호출할 때 사용하는 키워드
