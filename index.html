@@ -59,10 +59,18 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
     <!-- SWIPER -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"
     />
+    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- in BODY -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">1</div>
+        <div class="swiper-slide">2</div>
+        <div class="swiper-slide">3</div>
+      </div>
+    </div>
     <script defer src="./js/main.js"></script>
   </head>
 
@@ -405,20 +413,20 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
       </div>
     </div>
 
-    <!-- Visual -->
+    <!--VISUAL-->
     <section class="visual">
       <div class="inner">
         <div class="title fade-in">
           <img
             src="./images/visual_title.png"
-            alt="Starbucks Delightful Start to the Year"
+            alt="STARBUCKS DELIGHTFUL START TO THE YEARS"
           />
           <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a>
         </div>
         <div class="fade-in">
           <img
             src="./images/visual_cup1.png"
-            alt="new Oatmeal Lattet"
+            alt="new OATMEAL LATTE"
             class="cup1 image"
           />
           <img
@@ -430,7 +438,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
         <div class="fade-in">
           <img
             src="./images/visual_cup2.png"
-            alt="new Starbucks Caramel Crumble Mocha"
+            alt="new STARBUCKS CARAMEL CRUMBLE MOCHA"
             class="cup2 image"
           />
           <img
@@ -440,27 +448,52 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
           />
         </div>
         <div class="fade-in">
-          <img src="./images/visual_spoon.png" alt="spoon" class="spoon" />
+          <img src="./images/visual_spoon.png" alt="Spoon" class="spoon" />
         </div>
       </div>
     </section>
 
+    <!--NOTICE-->
     <section class="notice">
+      <!--NOTICE LINE-->
       <div class="notice-line">
         <div class="bg-left"></div>
         <div class="bg-right"></div>
         <div class="inner">
           <div class="inner__left">
             <h2>공지사항</h2>
-           
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)"
+                    >크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내</a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)"
+                    >[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트</a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)"
+                    >스타벅스커피 코리아 애플리케이션 버전 업데이트 안내</a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)"
+                    >[당첨자 발표] 뉴이어 전자영수증 이벤트</a
+                  >
+                </div>
+              </div>
             </div>
             <a href="javascript:void(0)" class="notice-line__more">
-              <div class="material-icons">add_circle</div>
+              <span class="material-icons">add_circle</span>
             </a>
           </div>
+
           <div class="inner__right">
             <h2>스타벅스 프로모션</h2>
-            <div class="toggle-promotion">
+            <div class="toggle-promotion open">
               <div class="material-icons">upload</div>
             </div>
           </div>

@@ -51,3 +51,8 @@ fadeEls.forEach(function (fadeEl, index) {
     opacity: 1,
   });
 });
+
+// new Swiper(선택자, 옵션)
+new Swiper(".notice-line .swiper-container", {
+  direction: "vertical",
+}); // new : 생성자 함수를 호출할 때 사용하는 키워드
