@@ -43,3 +43,18 @@ window.addEventListener(
     }
   }, 300)
 ); // 300ms 단위로 호출
+
+const fadeEls = document.querySelectorAll(".visual .fade-in");
+fadeEls.forEach(function (fadeEl, index) {
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1) * 0.7, // 0.7, 1.4, 2.1, 2.8초 뒤에 나타난다.
+    opacity: 1,
+  });
+});
+
+// new Swiper(선택자, 옵션)
+new Swiper(".notice-line .swiper-container", {
+  direction: "vertical",
+  autoplay: true, // 자동재생
+  loop: true, // 반복재생
+}); // new : 생성자 함수를 호출할 때 사용하는 키워드
