@@ -31,13 +31,14 @@ window.addEventListener(
       // 배지 숨기기
       // gsap.to(요소, 지속시간, 옵션)
       gsap.to(badgeEl, 0.6, {
-        opacity: 0,
-        display: "none",
+        opacity: 0, // 이것만 추가하면, 사라지기만 하고, 자리는 남아있다.
+        display: "none", // 이것을 추가하면, 사라지면서 자리도 사라진다. 투명도가 0이되면 그이후 display:none으로 바뀐다.
       });
     } else {
       // 배지 보이기
       gsap.to(badgeEl, 0.6, {
         opacity: 1,
+        display: "block",
       });
     }
   }, 300)
