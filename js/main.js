@@ -32,6 +32,7 @@ window.addEventListener(
       // gsap.to(요소, 지속시간, 옵션)
       gsap.to(badgeEl, 0.6, {
         opacity: 0,
+        display: "none",
       });
     } else {
       // 배지 보이기
