@@ -132,7 +132,7 @@ a {
 }
 
 .header .sub-menu ul.menu li a {
-  font-size: 12px;
+  font-size: 13px;
   padding: 11px 16px;
   display: block; /*인라인 요소를 block요소로 변경*/
   color: #656565;
