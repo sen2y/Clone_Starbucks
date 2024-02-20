@@ -58,3 +58,37 @@ new Swiper(".notice-line .swiper-container", {
   autoplay: true, // 자동재생
   loop: true, // 반복재생
 }); // new : 생성자 함수를 호출할 때 사용하는 키워드
+
+new Swiper(".promotion .swiper-container", {
+  // deirection: "horizontal", // 기본값
+  slidesPerView: 3, // 한번에 보여줄 슬라이드 개수
+  spaceBetween: 10, // 슬라이드 사이 여백
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+  loop: true, // 반복재생 (맨끝에서 다시 처음으로)
+  autoplay: {
+    delay: 5000, // 5초에 한번씩 자동재생
+  },
+  pagination: {
+    el: ".promotion .swiper-pagination", // 페이지 번호 요소 선택자
+    clickable: true, // 사용자의 페이지 번호 요소 제어 가능 여부
+  },
+  navigation: {
+    prevEl: ".promotion .swiper-prev",
+    nextEl: ".promotion .swiper-next",
+  },
+});
+
+const promotionToggleBtn = document.querySelector(".toggle-promotion");
+const promotionEl = document.querySelector(".promotion");
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener("click", function () {
+  // const isHidePromotion = promotionEl.classList.contains("hide");
+  isHidePromotion = !isHidePromotion;
+  if (isHidePromotion) {
+    // 숨김 처리
+    promotionEl.classList.add("hide");
+  } else {
+    // 보임 처리
+    promotionEl.classList.remove("hide");
+  }
+});
