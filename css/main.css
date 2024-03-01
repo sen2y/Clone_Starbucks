@@ -740,8 +740,55 @@ a {
 
 /* reserve store */
 .reserve-store {
+  background-image: url("../images/reserve_store_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .reserve-store .inner {
-  height: 400px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reserve-store .inner .medal {
+  width: 334px;
+  height: 334px;
+  perspective: 600px;
+}
+
+.reserve-store .inner .medal .front,
+.reserve-store .inner .medal .back {
+  position: absolute;
+  width: 334px;
+  height: 334px;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.reserve-store .inner .medal .front {
+  transform: rotateY(0deg);
+}
+
+.reserve-store .inner .medal:hover .front {
+  transform: rotateY(180deg);
+}
+
+.reserve-store .inner .medal .back {
+  transform: rotateY(-180deg);
+}
+
+.reserve-store .inner .medal:hover .back {
+  transform: rotateY(0deg);
+}
+
+.reserve-store .inner .medal .back .btn {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
