@@ -103,7 +103,7 @@ function random(min, max) {
 function floatingObject(selector, delay, size) {
   // gsap.to(요소, 시간, 옵션)
   gsap.to(selector, random(1.5, 2.5), {
-    y: size,
+    y: size, // 위아래로 size px 만큼 움직임
     repeat: -1, // 무한반복
     yoyo: true, // 한번 재생된 애니메이션을 다시 뒤로 재생 -> 부드럽게 이동
     ease: Power1.easeInOut, // gsap easing 참고, 느리게 시작해서 빨라졌다가 느려지는 애니메이션
