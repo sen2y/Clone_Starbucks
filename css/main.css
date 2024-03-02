@@ -5,7 +5,6 @@ body {
   font-weight: 400;
   line-height: 1.4; /*1.4배*/
   font-family: "Nanum Gothic", sans-serif;
-  height: 6000px;
 }
 
 img {
@@ -921,4 +920,93 @@ a {
 .awards .swiper-next:hover {
   background-color: #fff;
   color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #272727;
+  border-top: 1px solid #333;
+}
+
+footer .inner {
+  padding: 40px 0 60px 0;
+}
+
+footer .menu {
+  display: flex;
+  justify-content: center;
+}
+
+footer .menu li {
+  position: relative;
+}
+
+footer .menu li::before {
+  /*footer의 menu의 자식요소인 li에 before라는 (인라인요소인)가상요소를 추가*/
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute; /*position: absolute, fixed인 경우 display: block으로 자동으로 바뀐다.*/
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto 0;
+}
+
+footer .menu li:last-child::before {
+  display: none;
+}
+footer .menu li a {
+  color: #ccc;
+  font-size: 12px;
+  padding: 15px;
+  display: block; /*padding 넣어주기 위해 인라인요소를 block요소로 변경*/
+}
+
+footer .menu li a.green {
+  /*footer의 menu의 자식요소인 li의 자식요소인 a태그에 green이라는 클래스를 추가 ( 일치 선택자 )*/
+  color: #669900;
+}
+
+footer .btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+footer .btn-group .btn {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+footer .btn-group:last-child {
+  margin-right: 0;
+}
+
+footer .info {
+  margin-top: 30px;
+  text-align: center;
+}
+
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+footer .info span:last-child {
+  margin-right: 0;
+}
+
+footer .copyright {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+footer .logo {
+  /* 가로너비가 이미 있으므로 가운데정렬 margin auto로 가능 */
+  margin: 30px auto 0;
 }

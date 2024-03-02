@@ -138,3 +138,6 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, "show") // 화면에 보여진다고 판단이 되면 메소드를 실행
     .addTo(new ScrollMagic.Controller()); // 컨트롤러에 장면을 할당하는 메소드
 });
+
+const thisYear = document.querySelector(".this-year");
+thisYear.textContent = new Date().getFullYear(); // 2021
