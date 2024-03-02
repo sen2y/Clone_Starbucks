@@ -19,6 +19,7 @@ searchInputEl.addEventListener("blur", function () {
 });
 
 const badgeEl = document.querySelector(".header .badges");
+const toTopEl = document.querySelector("#to-top");
 
 // throttle : 일정 시간 간격을 두고 이벤트가 연속해서 발생하는 것을 제한하는 기능
 // 일정시간에 한번씩만 호출되도록 설정
@@ -34,15 +35,32 @@ window.addEventListener(
         opacity: 0, // 이것만 추가하면, 사라지기만 하고, 자리는 남아있다.
         display: "none", // 이것을 추가하면, 사라지면서 자리도 사라진다. 투명도가 0이되면 그이후 display:none으로 바뀐다.
       });
+      // 버튼 보이기
+      // gsap.to("#to-top", 0.2, { // 요소대신 선택자를 바로 넣을 수도 있다.
+      gsap.to(toTopEl, 0.2, {
+        x: 0, // 요소의 원래 위치로 이동
+      });
     } else {
       // 배지 보이기
       gsap.to(badgeEl, 0.6, {
         opacity: 1,
         display: "block",
       });
+      // 버튼 숨기기
+      // gsap.to("#to-top", 0.2, {
+      gsap.to(toTopEl, 0.2, {
+        x: 100, // 오른쪽으로 100px 이동
+      });
     }
   }, 300)
 ); // 300ms 단위로 호출
+
+toTopEl.addEventListener("click", function () {
+  // window 객체 : 우리가 보는 화면 창
+  gsap.to(window, 0.7, {
+    scrollTo: 0, // 화면의 위치를 0px 지점으로 이동
+  });
+});
 
 const fadeEls = document.querySelectorAll(".visual .fade-in");
 fadeEls.forEach(function (fadeEl, index) {
@@ -140,4 +158,4 @@ spyEls.forEach(function (spyEl) {
 });
 
 const thisYear = document.querySelector(".this-year");
-thisYear.textContent = new Date().getFullYear(); // 2021
+thisYear.textContent = new Date().getFullYear(); // 2024
