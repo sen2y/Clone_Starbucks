@@ -81,9 +81,11 @@ new Swiper(".promotion .swiper-container", {
 new Swiper(".awards .swiper-container", {
   slidesPerView: 5, // 한번에 보여줄 슬라이드 개수
   loop: true, // 반복재생
+  autoplay: true, // 자동재생
+  spaceBetween: 30, // 슬라이드 사이 여백
   navigation: {
-    prevEl: ".awards .swiper-prev",
-    nextEl: ".awards .swiper-next",
+    prevEl: ".awards .swiper-prev", // 이전 버튼 클래스명
+    nextEl: ".awards .swiper-next", // 다음 버튼 클래스명
   },
 });
 
