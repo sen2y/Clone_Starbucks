@@ -78,6 +78,15 @@ new Swiper(".promotion .swiper-container", {
   },
 });
 
+new Swiper(".awards .swiper-container", {
+  slidesPerView: 5, // 한번에 보여줄 슬라이드 개수
+  loop: true, // 반복재생
+  navigation: {
+    prevEl: ".awards .swiper-prev",
+    nextEl: ".awards .swiper-next",
+  },
+});
+
 const promotionToggleBtn = document.querySelector(".toggle-promotion");
 const promotionEl = document.querySelector(".promotion");
 let isHidePromotion = false;
@@ -114,3 +123,16 @@ function floatingObject(selector, delay, size) {
 floatingObject(".floating1", 1, 15);
 floatingObject(".floating2", 0.5, 15);
 floatingObject(".floating3", 1.5, 20);
+
+const spyEls = document.querySelectorAll("section.scroll-spy");
+spyEls.forEach(function (spyEl) {
+  // Scene : scroll-magic이라는 js 라이브러리를 통해서 특정한 요소를 감시하는 옵션을 지정해주는 메소드
+  // 스크롤이 발생하는 컨테이너
+  new ScrollMagic.Scene({
+    triggerElement: spyEl, // 보여짐 여부를 감시할 하나의 section 요소를 지정
+    triggerHook: 0.8, // 뷰포트의 0.8 지점에서 감시 , 감시하려는 요소가 0.8 지점에 걸리면 tigger 된다.
+  })
+    // .setClassToggle(요소, 클래스 이름) : 요소가 감시되면 클래스를 추가하거나 제거하는 메소드
+    .setClassToggle(spyEl, "show") // 화면에 보여진다고 판단이 되면 메소드를 실행
+    .addTo(new ScrollMagic.Controller()); // 컨트롤러에 장면을 할당하는 메소드
+});

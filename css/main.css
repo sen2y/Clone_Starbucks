@@ -79,6 +79,46 @@ a {
   color: #fff;
 }
 
+/* 3D 애니메이션 */
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+}
+
+.back-to-position.to-right {
+  transform: translateX(-150px);
+}
+
+.back-to-position.to-left {
+  transform: translateX(150px);
+}
+
+.show .back-to-position.to-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.show .back-to-position.to-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.show .back-to-position.delay-0 {
+  transition-delay: 0s; /*transition-delay: 0s; -> 0초 뒤에 실행*/
+}
+
+.show .back-to-position.delay-1 {
+  transition-delay: 0.3s;
+}
+
+.show .back-to-position.delay-2 {
+  transition-delay: 0.6s;
+}
+
+.show .back-to-position.delay-3 {
+  transition-delay: 0.9s;
+}
+
 /* header */
 .header {
   background-color: #f6f5f0;
@@ -833,4 +873,37 @@ a {
 }
 .find-store .text-group .description {
   margin-bottom: 20px;
+}
+
+.awards .swiper-prev,
+.awards .swiper-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+.awards .swiper-prev {
+  left: 50%;
+  margin-left: -680px;
+}
+
+.awards .swiper-next {
+  right: 50%;
+  margin-right: -680px;
+}
+
+.awards .swiper-prev:hover,
+.awards .swiper-next:hover {
+  background-color: #333;
+  color: #fff;
 }
